@@ -4,6 +4,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import Nav from './components/Nav'
 import Hero from './components/Hero'
+import Technologies from './components/Technologies'
 
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
     <>
       <Nav/>
       <Hero/>
+      <Technologies/>
    
     </>
   )

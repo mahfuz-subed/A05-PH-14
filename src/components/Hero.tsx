@@ -5,7 +5,7 @@ const Hero = () => {
     return (
         <div className='container mx-auto w-[80%]'>
             <section className='grid grid-cols-2 justify-between mt-30 '>
-                <div className="grid justify-between h-[80%] pt-10 "><h1 className='font-bold text-[40px]'>Build Your Ideal  <span className='bg-linear-to-r from-orange-500 via-orange-500 to-violet-800 bg-clip-text text-transparent mt-1'>Development Stack</span></h1>
+                <div className="grid justify-between h-[74%] pt-18 "><h1 className='font-bold text-[40px]'>Build Your Ideal  <span className='bg-linear-to-r from-orange-500 via-orange-500 to-violet-800 bg-clip-text text-transparent mt-1'>Development Stack</span></h1>
                 <p>Explore frontend, backend, database, and tooling options,
 compare them side by side, and put together the stack that fits your
 next project.</p>
