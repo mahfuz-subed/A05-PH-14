@@ -1,6 +1,10 @@
 import React from 'react';
-
-const Technologies = () => {
+import {use} from "react"
+const Technologies = ({teachnolgiesPromise}) => {
+   
+        const technologies = use(teachnolgiesPromise)
+        
+        
     return (
         <div className='container mx-auto w-[80%]'>
             <h2 className='text-[26px] font-bold'>Explore the <span>Technologies</span></h2>
