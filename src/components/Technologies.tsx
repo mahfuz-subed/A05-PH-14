@@ -1,6 +1,11 @@
 import React from 'react';
 import {use} from "react"
-const Technologies = ({teachnolgiesPromise}) => {
+import type { Itechnologies } from '../types/technologiesTypes';
+
+interface technologiesProps {
+    teachnolgiesPromise : Promise<Itechnologies[]>
+}
+const Technologies = ({teachnolgiesPromise}:technologiesProps) => {
    
         const technologies = use(teachnolgiesPromise)
         

@@ -6,8 +6,9 @@ import Nav from './components/Nav'
 import Hero from './components/Hero'
 import Technologies from './components/Technologies'
 import { Suspense } from 'react'
+import type { Itechnologies } from './types/technologiesTypes'
 
- const teachnolgiesPromise = async ()=>{
+ const teachnolgiesPromise = async ():Promise<Itechnologies[]>=>{
       const res = await fetch("/public/data.json");
       const data = await res.json();
       return data;

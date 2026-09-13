@@ -1,4 +1,4 @@
-interface Itechnologies{
+export interface Itechnologies{
     "id": number,
     "name": string,
     "category": string,
