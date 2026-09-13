@@ -9,7 +9,7 @@ import { Suspense } from 'react'
 import type { Itechnologies } from './types/technologiesTypes'
 
  const teachnolgiesPromise = async ():Promise<Itechnologies[]>=>{
-      const res = await fetch("/public/data.json");
+      const res = await fetch("/data.json");
       const data = await res.json();
       return data;
   }

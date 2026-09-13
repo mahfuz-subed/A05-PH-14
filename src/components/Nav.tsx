@@ -20,7 +20,7 @@ const Nav = () => {
             <div>
                  <ul className='flex  align-items-center gap-[15px]'>
                         <li><a href="">Sign in</a></li>
-                        <li><a href="" className='px-[17px] py-[9px] rounded-[26px] bg-[#DB2777]'>Sign Up</a></li>
+                        <li><a href="" className='px-[17px] py-[9px] rounded-[26px] bg-orange-500'>Sign Up</a></li>
                     </ul>
             </div>
 
