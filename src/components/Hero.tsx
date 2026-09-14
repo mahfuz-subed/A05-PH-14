@@ -10,7 +10,7 @@ const Hero = () => {
 compare them side by side, and put together the stack that fits your
 next project.</p>
                 <div className="grid grid-cols-2 mt-8">
-                    <button className='px-[1px] py-[6px] rounded-[10px] bg-linear-to-r from-orange-500 via-orange-500 to-violet-800 '>Explore Technologies</button><button  className='px-[1px] py-[6px] rounded-[10px] border border-[#e5e7eb] ml-4'>Learn More</button></div></div>
+                    <button className='px-[1px] py-[6px] rounded-[10px] bg-linear-to-r from-orange-500 via-orange-500 to-violet-800 cursor-pointer '>Explore Technologies</button><button  className='cursor-pointer px-[1px] py-[6px] rounded-[10px] border border-[#e5e7eb] ml-4'>Learn More</button></div></div>
                 <div><img src={heroimg} alt="" /></div>
             </section>
         </div>

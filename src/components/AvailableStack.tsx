@@ -27,7 +27,7 @@ const AvailableStack = ({technologies, selectedCard, setSelectedCard}:Itechnolog
                     )
  })
 
-};
+}
 </div>
     )}
 

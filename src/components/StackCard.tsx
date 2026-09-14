@@ -4,6 +4,8 @@ import { FaStar } from "react-icons/fa";
 import { useState } from 'react';
 import type { SetStateAction } from 'react';
 import type { Dispatch } from 'react';
+import { ToastContainer, toast } from 'react-toastify';
+
 interface ItechnologyProps{
   technology: Itechnologies;
   selectedCard: Itechnologies[];
@@ -16,14 +18,14 @@ const StackCard = ({technology,  selectedCard, setSelectedCard}:ItechnologyProps
   const [isSelected,setIsSelected] = useState(false);
 const handleSelectedCard = () => {
   setIsSelected(true)
-
+toast.success(`You have added ${technology.name} to your stack.`)
   setSelectedCard([...selectedCard,technology])
 }
     return (
        
                         <div className='container mx-auto'>
                             
-                        <div className="card w-60 bg-base-100 card-lg shadow-sm">
+                        <div className="card w-70 bg-base-100 card-lg shadow-sm">
   <div className="card-body">
     <div className='flex justify-between gap-15'>
         <img src={technology.icon} alt="" className='w-[30px]'/>

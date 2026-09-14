@@ -19,7 +19,7 @@ const Technologies = ({teachnolgiesPromise}:technologiesProps) => {
             <h2 className='text-[26px] font-bold'>Explore the <span>Technologies</span></h2>
             <p className='text-[#8e8f92]'>Pick one technology per category to build your ideal stack.</p>
         
-            <div className='flex gap-10 items-start'>
+            <div className='flex gap-2 items-start'>
               <div className='w-[80%]'>
                   <AvailableStack technologies={technologies} selectedCard={selectedCard} setSelectedCard={setSelectedCard} />
               </div>
