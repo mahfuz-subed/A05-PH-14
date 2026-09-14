@@ -7,6 +7,7 @@ import Hero from './components/Hero'
 import Technologies from './components/Technologies'
 import { Suspense } from 'react'
 import type { Itechnologies } from './types/technologiesTypes'
+import Footer from './components/Footer'
 
  const teachnolgiesPromise = async ():Promise<Itechnologies[]>=>{
       const res = await fetch("/data.json");
@@ -27,6 +28,7 @@ function App() {
       <Suspense fallback={<p>Loading.....</p>}>
         <Technologies teachnolgiesPromise={teachnolgiesPromise()}/>
       </Suspense>
+      <Footer/>
    
     </>
   )

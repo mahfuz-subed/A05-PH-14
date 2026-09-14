@@ -1,14 +1,18 @@
 import React from 'react';
 import type { Itechnologies } from '../types/technologiesTypes';
 import { FaStar } from "react-icons/fa";
+import { useState } from 'react';
 
-const StackCard = ({technologies, isSelected, setIsSelected}) => {
-  
+interface ItechnologyProps{
+  technology: Itechnologies;
+}
+
+
+const StackCard = ({technology}:ItechnologyProps) => {
+ 
+  const [isSelected, setIsSelected] = useState(false);
     return (
-        <div className='grid grid-cols-3 mt-10 gap-1'>
-            {
-                technologies.map((technology:Itechnologies) =>{
-                    return (
+       
                         <div className='container mx-auto w-[80%]'>
                             
                         <div className="card w-75 bg-base-100 card-xl shadow-sm ">
@@ -36,10 +40,9 @@ const StackCard = ({technologies, isSelected, setIsSelected}) => {
 </div>
                             </div>
                     )
-                } )
-            }
-        </div>
-    );
-};
+                } 
+         
+    
+
 
 export default StackCard;
