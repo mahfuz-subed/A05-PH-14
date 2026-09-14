@@ -10,7 +10,8 @@ interface ItechnologyProps{
 
 const StackCard = ({technology}:ItechnologyProps) => {
  
-  const [isSelected, setIsSelected] = useState(false);
+  const [isSelected,setIsSelected] = useState(false);
+
     return (
        
                         <div className='container mx-auto w-[80%]'>
@@ -32,9 +33,10 @@ const StackCard = ({technology}:ItechnologyProps) => {
         </div>
     </div>
     <div className=" card-actions">
-      <button onClick={()=>setIsSelected(true)}
-      className={"btn btn-primary px-20 py-6 mt-4 bg-orange-500 border-none"}
-      disabled={isSelected? true : false}>{isSelected? "Added" : "Add to Stack"}</button>
+      <button onClick={() => setIsSelected(true)}
+      className="btn btn-primary px-20 py-6 mt-4 bg-orange-500 border-none"
+      disabled={isSelected? true: false}>
+       {isSelected ? "Added" : "Add to Stack"}</button>
     </div>
   </div>
 </div>

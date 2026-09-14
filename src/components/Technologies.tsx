@@ -3,6 +3,7 @@ import {use} from "react"
 import type { Itechnologies } from '../types/technologiesTypes';
 import StackCard from './StackCard';
 import AvailableStack from './AvailableStack';
+import YourStack from './YourStack';
 
 interface technologiesProps {
     teachnolgiesPromise : Promise<Itechnologies[]>
@@ -19,6 +20,7 @@ const Technologies = ({teachnolgiesPromise}:technologiesProps) => {
             <p className='text-[#8e8f92]'>Pick one technology per category to build your ideal stack.</p>
         
         <AvailableStack technologies={technologies}/>
+     
         </div>
     );
 };
