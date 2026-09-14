@@ -2,23 +2,30 @@ import React from 'react';
 import type { Itechnologies } from '../types/technologiesTypes';
 import { FaStar } from "react-icons/fa";
 import { useState } from 'react';
-
+import type { SetStateAction } from 'react';
+import type { Dispatch } from 'react';
 interface ItechnologyProps{
   technology: Itechnologies;
+  selectedCard: Itechnologies[];
+  setSelectedCard: Dispatch<SetStateAction<Itechnologies[]>>
 }
 
 
-const StackCard = ({technology}:ItechnologyProps) => {
+const StackCard = ({technology,  selectedCard, setSelectedCard}:ItechnologyProps) => {
  
   const [isSelected,setIsSelected] = useState(false);
+const handleSelectedCard = () => {
+  setIsSelected(true)
 
+  setSelectedCard([...selectedCard,technology])
+}
     return (
        
-                        <div className='container mx-auto w-[80%]'>
+                        <div className='container mx-auto'>
                             
-                        <div className="card w-75 bg-base-100 card-xl shadow-sm ">
-  <div className="card-body ">
-    <div className='flex justify-between gap-20'>
+                        <div className="card w-60 bg-base-100 card-lg shadow-sm">
+  <div className="card-body">
+    <div className='flex justify-between gap-15'>
         <img src={technology.icon} alt="" className='w-[30px]'/>
          <p className=' badge badge-xl badge-soft badge-success mb-10'>{technology.badge}</p>
     </div>
@@ -33,8 +40,8 @@ const StackCard = ({technology}:ItechnologyProps) => {
         </div>
     </div>
     <div className=" card-actions">
-      <button onClick={() => setIsSelected(true)}
-      className="btn btn-primary px-20 py-6 mt-4 bg-orange-500 border-none"
+      <button onClick={() => handleSelectedCard() }
+      className="btn btn-primary px-15 py-6 mt-4 bg-orange-500 border-none"
       disabled={isSelected? true: false}>
        {isSelected ? "Added" : "Add to Stack"}</button>
     </div>
